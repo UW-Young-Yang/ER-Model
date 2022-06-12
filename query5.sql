@@ -1,0 +1,10 @@
+-- Q5
+WITH i AS
+(
+SELECT SId
+FROM Item
+)
+SELECT COUNT(DISTINCT UserId)
+FROM User
+INNER JOIN i ON i.SId = User.UserId
+WHERE User.Rating > 1000;

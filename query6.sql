@@ -1,0 +1,9 @@
+-- Q6
+WITH i AS
+(
+SELECT SId
+FROM Item
+)
+SELECT COUNT(DISTINCT BId)
+FROM Bidder
+INNER JOIN i ON i.SId = Bidder.BId;
